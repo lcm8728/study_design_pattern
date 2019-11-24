@@ -11,7 +11,9 @@ class BookStore {
 
     public Book sellBook(String type) {
         Book book = factory.createBook(type);
-        return packageBook(book);
+        Book packaged = packageBook(book);
+        System.out.println("book sold");
+        return packaged;
     }
 
     private Book packageBook(Book book) {
